@@ -570,6 +570,15 @@ a{
         width: 100%;
         top: 25%;
     }
+    .title h2{
+        font-size: 35px;
+    }
+    .title p{
+        width: 80%;
+        font-size: 16px;
+        font-weight: 100;
+        margin: 10px auto;
+    }
 }
 #particles{
     height: 100%;
@@ -953,4 +962,12 @@ a{
 }
 .footer .div-bottom a:hover{
     color: var(--main-color-blue);
+}
+@media(max-width: 1000px){
+    .footer .container{
+        flex-direction: column;
+    }   
+    .footer .feat .div-right{
+        float: left;
+    }
 }
