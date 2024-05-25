@@ -846,8 +846,17 @@ a{
     margin: 10px auto;
 }
 @media(max-width: 1000px){
+    .create-order form button{
+        width: 220px;
+    }
+    .create-order form div input{
+        width: 220px;
+    }
     .create-order .form{
         flex-direction: column;
+    }
+    .create-order form div textarea{
+        width: 220px;
     }
 }
 /* start section social-media */
