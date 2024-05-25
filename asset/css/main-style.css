@@ -46,23 +46,6 @@ input::-webkit-inner-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
-#loader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height:100vh;
-    position: fixed;
-    z-index:100;
-    font-family: poppins;
-    background-color: var(--main-color);
-    color: var(--color-white);
-    font-size: 70px;
-    width: 100%;
-}
-#loader span span{
-    color:var(--main-color-2)
-}
 html{
     background: var(--main-color-3);
     scroll-behavior: smooth;
@@ -186,7 +169,7 @@ a{
         min-height: 0;
         max-height: 0;
         overflow: hidden;
-        transition: all 1s;
+        /* transition: all 0.5s; */
         left: -45px;
         top: 30px;
         width: 200px;
@@ -199,6 +182,7 @@ a{
     .drow:focus .links-dro{
         min-height: 100px;
         max-height: 600px;
+        transition: all 0.5s;
     }
 }
 .navbar .navigation-links ul li select{
@@ -229,6 +213,9 @@ a{
 .navbar .navigation-links ul li select option:checked {
     background-color: var(--main-color-2);
     color: var(--color-white);
+}
+.drow a{
+    cursor: pointer;
 }
 @media(max-width: 1000px){
     .navbar .navigation-links ul li select{
@@ -515,7 +502,7 @@ a{
     min-height: 0;
     max-height: 0;
     overflow: hidden;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .links-dro a{
     padding: 4px 0;
@@ -527,6 +514,7 @@ a{
 .drow:focus .links-dro{
     min-height: 100px;
     max-height: 600px;
+    transition: all 0.5s;
 }
 
 }
@@ -597,7 +585,7 @@ a{
 }
 .services .feat{
     width: 90%;
-    margin: 10px auto;
+    margin: 30px auto;
     -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.7);
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -661,7 +649,7 @@ a{
 }
 .our-business .feat{
     width: 90%;
-    margin: 10px auto;
+    margin: 30px auto;
     -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.7);
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -753,7 +741,7 @@ a{
 }
 .our-teams .feat{
     width: 90%;
-    margin: 10px auto;
+    margin: 30px auto;
     -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.7);
     box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -949,6 +937,7 @@ a{
 }
 .footer .feat .div-right ul a:hover{
     padding-left: 20px;
+    color: var(--main-color-2);
 }
 .footer .div-bottom{
     display: flex;
@@ -971,3 +960,68 @@ a{
         float: left;
     }
 }
+#loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:100vh;
+    position: fixed;
+    z-index:100;
+    font-family: poppins;
+    background-color: var(--main-color);
+    color: var(--color-white);
+    font-size: 70px;
+    width: 100%;
+}
+#loader>span{
+    color: var(--main-color-2);
+    font-weight: 100;
+    font-size: 35px;
+    margin: 20px 0;
+}
+.loader {
+width: 48px;
+height: 48px;
+border: 3px dotted var(--color-white);
+border-style: solid solid dotted dotted;
+border-radius: 50%;
+display: inline-block;
+position: relative;
+box-sizing: border-box;
+animation: rotation 2s linear infinite;
+}
+.loader::after {
+content: '';  
+box-sizing: border-box;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+border: 3px dotted var(--main-color-2);
+border-style: solid solid dotted;
+width: 24px;
+height: 24px;
+border-radius: 50%;
+animation: rotationBack 1s linear infinite;
+transform-origin: center center;
+}
+
+@keyframes rotation {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(360deg);
+}
+} 
+@keyframes rotationBack {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(-360deg);
+}
+} 
