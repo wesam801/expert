@@ -887,3 +887,70 @@ a{
         padding:12px 100px;       
     }
 }
+/* start footer  */
+.footer {
+    padding: 40px 0;
+}
+.footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.footer .feat{
+    width: 100%;
+}
+.footer .feat img{
+    width: 100px;
+}
+.footer .feat p{
+    width: 90%;
+    color: var(--color-white);
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 2;
+}
+.footer .feat p+ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 20px 0;
+}
+.footer .feat p+ul a{
+    color: var(--main-color-2);
+    margin-right: 20px;
+    font-size: 25px;
+}
+.footer .feat p+ul a:hover{
+    color: var(--main-color-blue);
+}
+.footer .feat .div-right{
+    float: right;
+}
+.footer .feat .div-right h3{
+    font-size: 30px;
+    color: var(--color-white);
+}
+.footer .feat .div-right ul a{
+    color: #ddd;
+    margin: 10px 0;
+    display: block;
+    transition: all 0.4s;
+}
+.footer .feat .div-right ul a:hover{
+    padding-left: 20px;
+}
+.footer .div-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    color: var(--color-white);
+}
+.footer .div-bottom a{
+    color: var(--main-color-2);
+}
+.footer .div-bottom a:hover{
+    color: var(--main-color-blue);
+}
